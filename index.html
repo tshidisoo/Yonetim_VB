@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritabanı Yönetimi Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Veritabanı Yönetimi Quiz</h1>
+            <div class="quiz-info">
+                <span id="question-counter">1/33</span>
+                <span id="score">Puan: 0</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="quiz-container">
+                <div id="question-section">
+                    <h2 id="question-text"></h2>
+                    
+                    <!-- Çoktan seçmeli sorular için -->
+                    <div id="multiple-choice" class="question-type">
+                        <div class="options">
+                            <button class="option" data-option="A"></button>
+                            <button class="option" data-option="B"></button>
+                            <button class="option" data-option="C"></button>
+                            <button class="option" data-option="D"></button>
+                        </div>
+                    </div>
+
+                    <!-- Kod yazma soruları için -->
+                    <div id="code-writing" class="question-type" style="display: none;">
+                        <textarea id="code-input" placeholder="Kodunuzu buraya yazın..."></textarea>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button id="prev-btn" disabled>Önceki</button>
+                    <button id="next-btn">Sonraki</button>
+                    <button id="submit-btn" style="display: none;">Gönder</button>
+                </div>
+            </div>
+
+            <div id="result-section" style="display: none;">
+                <h2>Quiz Tamamlandı!</h2>
+                <div id="final-score"></div>
+                <div id="detailed-results"></div>
+                <button id="restart-btn">Yeniden Başla</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
